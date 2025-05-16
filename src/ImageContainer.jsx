@@ -115,7 +115,6 @@ export default function ImageContainer() {
       },
     });
 
-    // Hide text & close button
     tl.to([text, closeBtn], {
       opacity: 0,
       x: 10,
@@ -123,31 +122,17 @@ export default function ImageContainer() {
       ease: "power2.in",
     });
 
-    // Move image to center & shrink
-    tl.to(img, {
-      left: "50%",
-      top: "50%",
-      scale: 1,
-      xPercent: -50,
-      yPercent: -50,
+    tl.to(img ,{
+      left: "-30%",
+      
       duration: 0.4,
       ease: "power2.inOut",
     });
 
-    // Rotate and fade out image
-    tl.to(img, {
-      
-      opacity: 0,
-      duration: 0.2,
-      ease: "power2.inOut",
-    });
-
-    // Fade out background
-    tl.to(bg, {
+    tl.to([img,bg], {
       opacity: 0,
       duration: 0.3,
-    },"<");
-      
+    });
 
    
   };
