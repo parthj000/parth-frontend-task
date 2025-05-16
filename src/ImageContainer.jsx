@@ -251,7 +251,7 @@ export default function GridGallery() {
                     <div className="col-span-2">
                       <img
                         src={`/assets/${chunk[0].imgSrc}`}
-                        className="w-full h-[400px] object-cover rounded-md cursor-pointer"
+                        className="w-full h-[400px] object-cover object-top rounded-md cursor-pointer"
                         onClick={(e) => handleClick(chunk[0], e.target)}
                       />
                     </div>
@@ -260,7 +260,7 @@ export default function GridGallery() {
                         <div key={i}>
                           <img
                             src={`/assets/${item.imgSrc}`}
-                            className="w-full h-[190px] object-cover rounded-md cursor-pointer"
+                            className="w-full h-[190px] object-cover object-top rounded-md cursor-pointer"
                             onClick={(e) => handleClick(item, e.target)}
                           />
                         </div>
@@ -274,7 +274,7 @@ export default function GridGallery() {
                         <div key={i}>
                           <img
                             src={`/assets/${item.imgSrc}`}
-                            className="w-full h-[190px] object-cover rounded-md cursor-pointer"
+                            className="w-full h-[190px] object-cover object-top rounded-md cursor-pointer"
                             onClick={(e) => handleClick(item, e.target)}
                           />
                         </div>
@@ -283,7 +283,7 @@ export default function GridGallery() {
                     <div className="col-span-2">
                       <img
                         src={`/assets/${chunk[2].imgSrc}`}
-                        className="w-full h-[400px] object-cover rounded-md cursor-pointer"
+                        className="w-full h-[400px] object-cover object-center rounded-md cursor-pointer"
                         onClick={(e) => handleClick(chunk[2], e.target)}
                       />
                     </div>
@@ -295,7 +295,7 @@ export default function GridGallery() {
                 <div key={i}>
                   <img
                     src={`/assets/${item.imgSrc}`}
-                    className="w-full h-[300px] object-cover rounded-md cursor-pointer"
+                    className="w-full h-[300px] object-cover object-left-top rounded-md cursor-pointer"
                     onClick={(e) => handleClick(item, e.target)}
                   />
                 </div>
