@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
+    "gsap": "^3.13.0",
     "marquee": "^0.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-fast": "^0.0.2",
-    "react-fast-marquee": "^1.6.5"
+    "react-fast-marquee": "^1.6.5",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

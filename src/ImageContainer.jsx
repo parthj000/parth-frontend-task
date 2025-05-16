@@ -165,7 +165,10 @@ export default function ImageContainer() {
 
   return (
     <div className="w-screen h-screen relative overflow-hidden bg-black text-white p-4">
-      <h1 className="text-7xl font-semibold capitalize mb-10">Shane Weber</h1>
+      <div className="flex justify-between items-end">
+        <h1 className="text-7xl font-semibold capitalize mb-10">Shane Weber</h1>
+        <h1 className="text-2xl font-semibold capitalize mb-10">marquee</h1>
+      </div>
 
       <Marquee pauseOnHover speed={60} gradient={false}>
         {pictures.map((item, index) => (
@@ -180,7 +183,6 @@ export default function ImageContainer() {
           </div>
         ))}
       </Marquee>
-      
 
       {/* Expander Layer */}
       <div ref={expanderRef} className="fixed bg-white z-40 hidden" />
