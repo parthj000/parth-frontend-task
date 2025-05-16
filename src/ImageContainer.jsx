@@ -51,49 +51,50 @@ export default function ImageContainer() {
       opacity: 1,
       top: clickY,
       left: clickX,
-      xPercent: -50,
-      yPercent: -50,
       position: "fixed",
       zIndex: 50,
     });
 
    
-    const tl = gsap.timeline();
+    
 
 
    
 
+    const tl = gsap.timeline();
+
     tl.to(bg, {
       opacity: 1,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power1.out",
     });
 
+    tl.set(img, {
+      transformPerspective: 800,
+      rotationY: 0,
+    });
+
     tl.to(img, {
-      scale: 1,
+      rotationY: 360,
+      duration: 0.8,
+      ease: "power2.out",
+    });
+
+    tl.to(img, {
+      scale: 2,
       top: "50%",
-      left: "50%",
+      left: "30%",
       xPercent: -50,
       yPercent: -50,
-      duration: 0.5,
-      ease: "power2.out",
-    },"<").to(img, {
-      scale: 2,
-      
-      duration: 0.4,
-      ease: "power2.out",
-    }).to(img, {
-      left: "30%",
-      duration: 0.5,
+      duration: 0.6,
       ease: "power2.inOut",
-    });
+    },"<");
 
     tl.to(
       [text, closeBtn],
       {
         opacity: 1,
         x: 0,
-        
         duration: 0.5,
         stagger: 0.1,
         ease: "power2.out",
@@ -114,6 +115,7 @@ export default function ImageContainer() {
       },
     });
 
+    // Hide text & close button
     tl.to([text, closeBtn], {
       opacity: 0,
       x: 10,
@@ -121,17 +123,31 @@ export default function ImageContainer() {
       ease: "power2.in",
     });
 
-    tl.to(img ,{
-      left: "-30%",
-      
+    // Move image to center & shrink
+    tl.to(img, {
+      left: "50%",
+      top: "50%",
+      scale: 1,
+      xPercent: -50,
+      yPercent: -50,
       duration: 0.4,
       ease: "power2.inOut",
     });
 
-    tl.to([img,bg], {
+    // Rotate and fade out image
+    tl.to(img, {
+      
+      opacity: 0,
+      duration: 0.2,
+      ease: "power2.inOut",
+    });
+
+    // Fade out background
+    tl.to(bg, {
       opacity: 0,
       duration: 0.3,
-    });
+    },"<");
+      
 
    
   };
