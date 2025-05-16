@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.other{
+  font-family:  sans-serif;
+
+}
+
+.head{
+  font-family: 'owners-xnarrow', sans-serif;
+
+}
+
+:root{
+  font-family: 'halyard-display',sans-serif;
+}
